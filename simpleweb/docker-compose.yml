@@ -1,0 +1,17 @@
+version: '3'
+services: 
+    redis-server:
+        image: 'redis'
+    node-app:
+        #[build: .] means that we have a Dockerfile inside of the current working directory.
+        #build: .
+        build:
+            context: .
+            dockerfile: Dockerfile.dev            
+        ports: 
+            - "4000:8080"
+        volumes: 
+            - /usr/app/node_modules
+            - .:/usr/app
+        #command: ["npm", "run", "test"]
+
