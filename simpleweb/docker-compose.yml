@@ -1,6 +1,6 @@
 version: '3'
 services: 
-    redis-server:
+    redis:
         image: 'redis'
     node-app:
         #[build: .] means that we have a Dockerfile inside of the current working directory.

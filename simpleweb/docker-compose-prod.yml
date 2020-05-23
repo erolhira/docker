@@ -1,0 +1,10 @@
+version: '3'
+services: 
+    redis:
+        image: redis:latest
+        command: ["redis-server", "--bind", "redis", "--port", "6379"]
+    node-app:
+        build: .
+        ports: 
+            - "4000:8080"
+            

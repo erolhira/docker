@@ -1,12 +1,14 @@
 const express = require('express');
 const redis = require('redis');
 
+setTimeout(() => {}, 1);
+
 //use the express library to create a new app
 const app = express();
 const redisClient = redis.createClient({
     //host: 'https://my-redis-server.com' //without docker
     //host: 'https://[service-name-in-docker-compose-file]' //with docker
-    host: 'redis-server',
+    host: 'redis',
     port: 6379
 });
 redisClient.set('visits', 0);
