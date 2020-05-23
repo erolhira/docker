@@ -1,0 +1,12 @@
+language: generic 
+#tell travis that we need superuser permissions
+sudo: required
+services:
+    - docker
+
+before_install:
+    - docker build -t erolhira/simpleweb -f Dockerfile.dev .
+
+script:
+    - docker run erolhira/simpleweb npm run test -- --coverage
+
