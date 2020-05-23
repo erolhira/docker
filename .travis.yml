@@ -5,8 +5,8 @@ services:
     - docker
 
 before_install:
-    - docker build -t erolhira/simpleweb -f ./simpleweb/Dockerfile.dev ./simpleweb
+    - docker build -t erolhira/onlyweb -f ./onlyweb/Dockerfile ./onlyweb
 
 script:
-    - docker run erolhira/simpleweb npm run test -- --coverage
+    - docker run erolhira/onlyweb npm run test -- --coverage
 
