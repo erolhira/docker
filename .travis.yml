@@ -19,9 +19,8 @@ deploy:
     bucket_path: "docker-onlyweb"
     on:
         branch: master
-    access_key_id: "$AWS_ACCESS_KEY"
-    secret_access_key:
-        secure: "$AWS_SECRET_KEY"
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
 
 #bucket_name: the S3 bucket where to put project files
 #bucket_path: the directory path that will be created under S3 bucket to put the files in.
