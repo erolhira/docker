@@ -11,6 +11,6 @@ app.get('/', (req, res) => {
 
 //start listening port 8080 
 //and after the app starts listening to this port correctly we will print out a little message.
-app.listen(8080, () => {
-    console.log('Listening on port 8080');
+app.listen(80, () => {
+    console.log('Listening on port 80');
 });
