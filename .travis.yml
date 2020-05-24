@@ -10,6 +10,9 @@ before_install:
 script:
     - docker run erolhira/onlyweb npm run test -- --coverage
 
+before_deploy:
+    - cd onlyweb
+
 deploy:
     provider: elasticbeanstalk
     region: "eu-central-1"
