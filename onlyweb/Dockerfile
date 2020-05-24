@@ -1,5 +1,8 @@
 FROM node:alpine
 
+#this is for elasticbeanstalk port mapping
+EXPOSE 80
+
 WORKDIR /usr/app
 
 #copy package.json file which is in the root of the build context
