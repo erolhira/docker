@@ -1,7 +1,7 @@
 FROM node:alpine
 
 #this is for elasticbeanstalk port mapping
-EXPOSE 80
+EXPOSE 8080
 
 WORKDIR /usr/app
 
